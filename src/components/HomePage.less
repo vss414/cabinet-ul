@@ -1,0 +1,150 @@
+@import "../styles/base";
+@import "../styles/vertical-align";
+
+.HomePage {
+    font-family: @font-family-regular;
+    .top-block {
+        width: @body-width;
+
+        > div {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .balance {
+            line-height: 1;
+            color: @main-color;
+            font-size: 30px;
+            font-family: @font-family-regular;
+            margin-left: @margin-left;
+
+            .negative, .positive {
+                min-height: 30px;
+            }
+
+            > .negative {
+                color: red;
+            }
+        }
+        .link {
+            font-family: @font-family;
+            position: absolute;
+            right: 0;
+            margin-top: 35px;
+            a {
+                font-size: 20px;
+                text-decoration: none;
+                color: @main-color;
+                border-bottom: 1px solid @main-color;
+                display: inline-block;
+                margin: 0 3px;
+            }
+        }
+    }
+
+    .services {
+        margin-top: 20px;
+        padding-left: @margin-left;
+        > .title {
+            color: @main-color;
+            font-size: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li {
+                vertical-align: middle;
+                margin: 1px 0;
+                height: 50px;
+
+                > div {
+                    display: table-cell;
+                    height: 50px;
+                    vertical-align: middle;
+
+                    &.title {
+                        width: 312px;
+                        > span {
+                            margin-top: 18px;
+                            color: @main-color;
+                            border-bottom: 1px solid @main-color;
+                            font-size: 15px;
+                        }
+                    }
+                    &.not-connected {
+                        width: @button-width-default;
+                        font-family: @font-family;
+                        font-size: 24px;
+                        color: #000;
+                        text-align: center;
+                    }
+                }
+
+                input {
+                    width: @button-width-default;
+                    font-size: 30px;
+                }
+            }
+        }
+        > .notice {
+            color: #000;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    }
+}
+.issue-message {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    .vertical-align(center);
+
+    font-family: @font-family;
+    font-size: 36px;
+}
+.service-info {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    .vertical-align(center);
+
+    .description {
+        margin: 0 30px;
+        color: black;
+        text-align: left;
+        font-family: @font-family-regular;
+        font-size: 18px;
+
+        h3 {
+            color: @main-color;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        ul {
+            margin: 5px 0 5px 22px;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            list-style-type: none;
+            display: list-item;
+            text-align: -webkit-match-parent;
+
+            &:before {
+                content: "•";
+                color: @main-color;
+                position: absolute;
+                left: -20px;
+                top: -11px;
+                font-size: 2em;
+            }
+        }
+    }
+    .buttons {
+        text-align: center;
+        input {
+            margin: 30px 5px;
+        }
+    }
+}

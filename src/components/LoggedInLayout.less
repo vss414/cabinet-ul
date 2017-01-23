@@ -1,0 +1,136 @@
+@import "../styles/base";
+
+.LoggedInLayout {
+  width: @body-width;
+  max-width: @body-width;
+  margin: 0 auto;
+  padding: 0 5px;
+  position: relative;
+  line-height: 1;
+
+  a {
+    text-decoration: none;
+  }
+  .change_color {
+    color: @main-color;
+    &:hover {
+      color: @main-color-hover;
+    }
+    &:active {
+      color: @main-color-active;
+    }
+  }
+  .change_background {
+    color: white;
+    background-color: @main-color;
+    +transition(0.2s background ease-in-out, 0.2s outline ease-in-out)
+    &.disable {
+      background-color: @main-color-disable;
+      pointer-events: none;
+    }
+    &:hover {
+      background-color: @main-color-hover;
+    }
+    &:active, &.active {
+      background-color: @main-color-active;
+    }
+    > p {
+      display: inline-block;
+      font-size: 18px;
+      min-width: 7px;
+      vertical-align: super;
+    }
+  }
+
+  > header {
+    height: 158px;
+    position: relative;
+    margin: 7px 0 0;
+    color: @main-color;
+    width: @body-width;
+
+    .logo {
+      position: absolute;
+      top: 28px;
+      left: 50px;
+    }
+
+    .phone_title {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 10px 0 0;
+      font-size: 24px;
+      font-family: @font-family-regular;
+    }
+
+    .phone {
+      position: absolute;
+      right: 0;
+      font-size: 24px;
+      font-family: @font-family-regular;
+      bottom: 76px;
+
+      a, a:visited {
+        color: @main-color;
+        text-decoration: none;
+      }
+      a:hover {
+        color: @main-color-hover;
+      }
+      a:active {
+        color: #890cc9;
+      }
+
+      span {
+        font-size: 36px;
+        font-family: @font-family-regular;
+      }
+    }
+
+    .additional_menu {
+      position: absolute;
+      right: 0;
+      top: 120px;
+      font-size: 18px;
+      color: @main-color;
+      font-family: @font-family-regular;
+
+      > a {
+        color: @main-color;
+        padding-left: 20px;
+      }
+    }
+
+  }
+
+  > .menu {
+    display: table;
+    width: @body-width;
+
+    &.disabled {
+      > a {
+        pointer-events: none;
+      }
+    }
+
+    > a {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      width: @button-width-default;
+      padding: 27px 0;
+      font-family: @font-family;
+      font-size: 32px;
+      margin: 0 auto;
+
+      &:not(:first-of-type):not(:last-of-type) {
+          margin: 0 2px;
+      }
+    }
+  }
+
+  > .content {
+    padding: 20px 0 100px 0;
+  }
+}

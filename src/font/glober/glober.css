@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'globerthin_free';
+    src: url('glober_thin_free.eot');
+    src: url('glober_thin_free.eot?#iefix') format('embedded-opentype'),
+         url('glober_thin_free.woff') format('woff'),
+         url('glober_thin_free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'globerbold_free';
+    src: url('glober_bold_free.eot');
+    src: url('glober_bold_free.eot?#iefix') format('embedded-opentype'),
+         url('glober_bold_free.woff') format('woff'),
+         url('glober_bold_free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

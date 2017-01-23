@@ -1,0 +1,61 @@
+@import "../styles/base";
+
+.AccountData {
+    font-family: @font-family-regular;
+    margin-top: 20px;
+
+    > div {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+
+        &.account, &.account-select {
+            padding-left: @margin-left;
+            color: @main-color;
+            font-size: 30px;
+            width: 60%;
+        }
+
+        &.account-select {
+            height: 100px;
+
+            .title {
+                width: 200px;
+                margin-bottom: 10px;
+            }
+            .list {
+                width: 225px;
+            }
+        }
+
+        &.manager {
+            width: 35%;
+            font-size: 17px;
+            color: #000;
+            text-align: right;
+            float: right;
+
+            > div {
+                display: inline-block;
+                padding-right: @margin-left;
+                text-align: left;
+
+                p {
+                    margin: 2px 0;
+                    line-height: 1;
+                }
+
+                a {
+                    color: @main-color;
+                    &:visited {
+                        color: @main-color;
+                    }
+                }
+
+                .name {
+                    font-family: @font-family-bold;
+                }
+            }
+        }
+    }
+}

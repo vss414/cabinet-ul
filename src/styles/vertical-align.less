@@ -1,0 +1,22 @@
+.vertical-align(@position) {
+
+  /* Internet Explorer 10 */
+  display: -ms-flexbox;
+  -ms-flex-pack: @position;
+  -ms-flex-align: @position;
+
+  /* Firefox */
+  display: -moz-box;
+  -moz-box-pack: @position;
+  -moz-box-align: @position;
+
+  /* Safari, Opera, and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: @position;
+  -webkit-box-align: @position;
+
+  /* W3C */
+  display: box;
+  box-pack: @position;
+  box-align: @position;
+}

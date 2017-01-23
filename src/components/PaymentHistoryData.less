@@ -1,0 +1,38 @@
+@import "../styles/base";
+
+.PaymentHistoryData {
+    font-family: @font-family-regular;
+    display: table;
+    width: 100%;
+    overflow-y: auto;
+    border-collapse: collapse;
+
+    .item {
+        display: table-row;
+        > div {
+            display: table-cell;
+            height: 50px;
+            padding: 0 28px;
+            border-bottom: 1px solid #0c84c9;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000;
+            vertical-align: middle;
+            text-align: left;
+            &:first-child {
+                min-width: 95px;
+            }
+            &:last-child {
+                min-width: 100px;
+            }
+        }
+        &.header {
+            div {
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                color: @main-color;
+            }
+        }
+    }
+}

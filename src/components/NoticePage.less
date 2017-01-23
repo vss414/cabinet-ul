@@ -1,0 +1,27 @@
+@import "../styles/base";
+
+.NoticePage {
+    font-family: @font-family-regular;
+    >.title {
+        color: @main-color;
+        padding-left: @margin-left;
+        font-size: 30px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .list {
+        > .item {
+            border: 1px solid @main-color;
+            margin-bottom: 5px;
+
+            > div {
+                padding: 15px 30px;
+            }
+            > .title {
+                color: @main-color;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

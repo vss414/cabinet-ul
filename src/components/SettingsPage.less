@@ -1,0 +1,56 @@
+@import "../styles/buttons";
+
+.SettingsPage {
+    font-family: @font-family-regular;
+    .block {
+        margin-bottom: 20px;
+        >.title {
+            color: @main-color;
+            padding-left: @margin-left;
+            font-size: 30px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .message {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: left;
+            &.success {
+                color: @main-color-active
+            }
+            &.error {
+                color: red;
+            }
+        }
+
+        .settings-input {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .input-block {
+            display: inline-block;
+            width: 337px;
+            vertical-align: top;
+
+            &:not(:first-of-type):not(:last-of-type) {
+                margin: 0 3px;
+            }
+
+            &:first-of-type {
+                margin-right: 3px;
+            }
+
+            &:last-of-type {
+                margin-left: 3px;
+            }
+        }
+
+        .indent {
+            margin: 10px 0;
+        }
+    }
+}
